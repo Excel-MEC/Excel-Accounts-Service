@@ -1,0 +1,6 @@
+[submodule "Excel-Accounts-Backend"]
+	path = Excel-Accounts-Backend
+	url = https://github.com/Excel-MEC/Excel-Accounts-Backend
+[submodule "Excel-Accounts-Frontend"]
+	path = Excel-Accounts-Frontend
+	url = https://github.com/Excel-MEC/Excel-Accounts-Frontend
