@@ -36,19 +36,19 @@ services:
       - ./Excel-Accounts-Backend/.:/api
     ports:
       - '5000:5000'
-#     depends_on:
-#       - db
+    depends_on:
+      - db
 
-#   db:
-#     container_name: 'db'
-#     restart: always
-#     image: postgres:alpine
-#     volumes:
-#       - 'pgdata:/var/lib/postgresql/data'
-#     ports:
-#       - '5432:5432'
-#     expose:
-#       - '5432'
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=ExcelAccounts
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+       - 5432:5432
 
-# volumes:
-#   pgdata:
+volumes:
+  pgdata:
